@@ -36,6 +36,11 @@
                                 <span class="hide-menu">Kalibrasi </span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a href="<?= base_url('pemeliharaankalibrasis') ?>" class="sidebar-link">
+                                <span class="hide-menu">Pemeliharaan </span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

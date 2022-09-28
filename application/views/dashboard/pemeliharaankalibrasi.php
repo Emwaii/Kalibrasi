@@ -35,7 +35,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Dashboard</a>
-                                        <i class="fas fa-angle-double-right"></i> Master Alat
+                                        <i class="fas fa-angle-double-right"></i> Master Pemeliharaan
                                     </li>
                                 </ol>
                             </nav>
@@ -50,7 +50,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Daftar Alat</h4>
+                                <h4 class="card-title">Daftar Pemeliharaan</h4>
                                 <hr>
                                 <h6 class="card-subtitle">
                                     <div class="btn-list">
@@ -64,28 +64,26 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Nama Alat</th>
-                                                <th>Tanggal Kalibrasi</th>
-                                                <th>Lampiran</th>
-                                                <th>Quality Pass</th>
-
+                                                <th>Tanggal Pemeliharaan</th>
+                                                <th>Petugas</th>
                                                 <th>Action</th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $i = 1;
-                                            foreach ($kalibrasi as $data) : ?>
+                                            foreach ($pemeliharaan as $data) : ?>
                                                 <tr>
                                                     <td><?= $i++ ?></td>
                                                     <td><?php echo $data->nama_alat ?></td>
-                                                    <td><?php echo $data->tgl_kalibrasi ?></td>
-                                                    <td><?php echo $data->lampiran ?></td>
-                                                    <td><?php echo $data->quality_pass ?></td>
+                                                    <td><?php echo $data->tgl_pemeliharaan ?></td>
+                                                    <td><?php echo $data->petugas ?></td>
+
                                                     <td>
-                                                        <a href="<?php echo site_url('AlatKalibrasi/edit_alatkalibrasi/' . $data->id_alat) ?>" class="btn btn-sm btn-outline-success">
+                                                        <a href="<?php echo site_url('PemeliharaanKalibrasi/edit_pemeliharaan/' . $data->id_pemeliharaan) ?>" class="btn btn-sm btn-outline-success">
                                                             <i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>
                                                         </a>
-                                                        <a onclick="deleteConfirm('<?php echo site_url('AlatKalibrasi/delete_alatkalibrasi/' . $data->id_alat) ?>')" href="#!" class="btn btn-sm btn-outline-danger">
+                                                        <a onclick="deleteConfirm('<?php echo site_url('PemeliharaanKalibrasi/delete_pemeliharaan/' . $data->id_pemeliharaan) ?>')" href="#!" class="btn btn-sm btn-outline-danger">
                                                             <i class="icon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></i>
                                                         </a>
                                                     </td>
