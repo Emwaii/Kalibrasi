@@ -23,18 +23,14 @@ class C_Qrcode extends CI_Controller
 
 
 	// Get Save User
-	public function save_kalibrasi()
+	public function simpan_Qrcode()
 	{
-		$data = array(
-			'id_alat'	        => $this->input->post('id_alat'),
-			'tgl_kalibrasi'	    => $this->input->post('tgl_kalibrasi'),
-			'lampiran'		    => $this->M_Kalibrasi->_uploadFileKalbirasi(),
-			'quality_pass'	    => $this->input->post('quality_pass')
-
-		);
-		$this->M_Kalibrasi->simpandatakalbirasi($data);
+		$data = $this->input->post('text');
+		$qr = $this->generate_qrcode($data);
+		
+		$this->M_Qrcode->simpanDataQr($qr);
 		$this->session->set_flashdata('notif', 'Data berhasil disimpan');
-		redirect(base_url('kalibrasis'));
+		redirect(base_url('qrcode'));
 	}
 
 	// Edit User
@@ -101,7 +97,7 @@ class C_Qrcode extends CI_Controller
   
         /* QR Data  */
         $params['data']     = $data;
-        $params['level']    = 'L';
+        $params['level']    = 'H';
         $params['size']     = 10;
         $params['savename'] = FCPATH.$config['imagedir']. $save_name;
         

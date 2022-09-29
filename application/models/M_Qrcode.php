@@ -9,9 +9,9 @@ class M_Qrcode extends CI_Model
         return $this->db->get($this->_table)->result();
     }
 
-    public function simpandatakalbirasi($data)
+    public function simpanDataQr($qr)
     {
-        $this->db->insert($this->_table, $data);
+        $this->db->insert($this->_table, $qr);
         return TRUE;
     }
     

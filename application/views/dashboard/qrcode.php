@@ -65,6 +65,7 @@
                                                 <th>#</th>
                                                 <th>Text</th>
                                                 <th>Qrcode</th>
+                                                <th>Qrcode</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -74,7 +75,8 @@
                                                 <tr>
                                                     <td><?= $i++ ?></td>
                                                     <td><?php echo $data->text?></td>
-                                                    <td><?php echo $data->file ?></td>
+                                                    <td><img src="<?php echo base_url($data->file) ?>" alt="Foto" width="50" /></td>
+                                                    <td><img src="<?php echo base_url($data->file) ?>" alt="Foto" width="50" /></td>
                                                     <td>
                                                         <a href="#!" class="btn btn-sm btn-outline-success">
                                                             <i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>
@@ -123,43 +125,17 @@
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header modal-colored-header bg-primary">
-                    <h4 class="modal-title" id="success-header-modalLabel">Form Tambah Alat
+                    <h4 class="modal-title" id="success-header-modalLabel">Form QRcode
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
                     <!-- Form -->
-                    <form action="<?php echo base_url('AlatKalibrasi/save_alatkalibrasi') ?>" method="post" enctype="multipart/form-data" role="form" class="pl-3 pr-3">
+                    <form action="<?php echo base_url('C_Qrcode/simpan_Qrcode') ?>" method="post" enctype="multipart/form-data" role="form" class="pl-3 pr-3">
 
                         <div class="form-group">
-                            <label for="nama_alat"><strong>Nama Alat</strong></label>
-                            <input type="text" class="form-control form-control-user" name="nama_alat" id="nama_alat" placeholder="Nama Alat" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="merk_alat"><strong>Merk Alat</strong></label>
-                            <input type="text" class="form-control form-control-user" name="merk_alat" id="merk_alat" placeholder="Merk Alat" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tipe_alat"><strong>Tipe Alat</strong></label>
-                            <input type="text" class="form-control form-control-user" name="tipe_alat" id="tipe_alat" placeholder="Tipe Alat" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="noseri_alat"><strong>No Seri Alat</strong></label>
-                            <input type="text" class="form-control form-control-user" name="noseri_alat" id="noseri_alat" placeholder="No Seri Alat" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lokasi_alat"><strong>Lokasi</strong></label>
-                            <input type="text" class="form-control form-control-user" name="lokasi_alat" id="lokasi_alat" placeholder="Lokasi Alat" required>
-                        </div>
-
-                        <label for="lokasi_alat"><strong>Tanggal Pengadaan</strong></label>
-                        <div class="input-group date" id="pengadaan_alat">
-                            <input type="text" class="form-control" name="tglpengadaan_alat" id="tglpengadaan_alat"/>
-                            <span class="input-group-append">
-                            <span class="input-group-text bg-light d-block">
-                                <i class="fa fa-calendar"></i>
-                            </span>
-                            </span>
+                            <label for="text"><strong>Text</strong></label>
+                            <input type="text" class="form-control form-control-user" name="text" id="text" placeholder="Tulis sesuatu.." required>
                         </div>
                         <!-- End Form -->
 
