@@ -72,7 +72,7 @@
                                         <tbody>
                                             <?php $i = 1;
                                             foreach ($qr as $data) : ?>
-                                                <tr>
+                                                <tr style="text-align:center;">
                                                     <td><?= $i++ ?></td>
                                                     <td><?php echo $data->text?></td>
                                                     <td><img src="<?php echo base_url($data->file) ?>" alt="Foto" width="50" /></td>
