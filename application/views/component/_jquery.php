@@ -29,7 +29,9 @@
 <!--This page plugins -->
 <script src="<?= base_url('src') ?>/assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url('src') ?>/dist/js/pages/datatable/datatable-basic.init.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
 <!-- Separate -->
 <script>
@@ -97,6 +99,15 @@
             timer: 1000
         }).then((result)=>{
             window.location.reload();
+        });
+    });
+    
+    $(function() {
+        $('#pengadaan_alat').datepicker({
+            format: "dd/mm/yyyy",
+            autoclose: true,
+            todayBtn: "linked",
+            todayHighlight: true
         });
     });
 </script>

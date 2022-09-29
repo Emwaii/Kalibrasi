@@ -63,32 +63,23 @@
                                         <thead class="bg-primary text-white">
                                             <tr>
                                                 <th>#</th>
-                                                <th>Nama</th>
-                                                <th>Merk</th>
-                                                <th>Tipe</th>
-                                                <th>No Seri</th>
-                                                <th>Lokasi</th>
-                                                <th>Tanggal Pengadaan</th>
+                                                <th>Text</th>
+                                                <th>Qrcode</th>
                                                 <th>Action</th>
-
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $i = 1;
-                                            foreach ($alat_kalibrasi as $data) : ?>
+                                            foreach ($qr as $data) : ?>
                                                 <tr>
                                                     <td><?= $i++ ?></td>
-                                                    <td><?php echo $data->nama_alat ?></td>
-                                                    <td><?php echo $data->merk_alat ?></td>
-                                                    <td><?php echo $data->tipe_alat ?></td>
-                                                    <td><?php echo $data->noseri_alat ?></td>
-                                                    <td><?php echo $data->lokasi_alat ?></td>
-                                                    <td><?php echo $data->tglpengadaan_alat ?></td>
+                                                    <td><?php echo $data->text?></td>
+                                                    <td><?php echo $data->file ?></td>
                                                     <td>
-                                                        <a href="<?php echo site_url('AlatKalibrasi/edit_alatkalibrasi/' . $data->id_alat) ?>" class="btn btn-sm btn-outline-success">
+                                                        <a href="#!" class="btn btn-sm btn-outline-success">
                                                             <i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>
                                                         </a>
-                                                        <a onclick="deleteConfirm('<?php echo site_url('AlatKalibrasi/delete_alatkalibrasi/' . $data->id_alat) ?>')" href="#!" class="btn btn-sm btn-outline-danger">
+                                                        <a onclick="" href="#!" class="btn btn-sm btn-outline-danger">
                                                             <i class="icon-trash" data-toggle="tooltip" data-placement="bottom" title="Hapus"></i>
                                                         </a>
                                                     </td>

@@ -37,6 +37,11 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
+                            <a href="<?= base_url('qrcode') ?>" class="sidebar-link">
+                                <span class="hide-menu">QRcode </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a href="<?= base_url('pemeliharaankalibrasis') ?>" class="sidebar-link">
                                 <span class="hide-menu">Pemeliharaan </span>
                             </a>

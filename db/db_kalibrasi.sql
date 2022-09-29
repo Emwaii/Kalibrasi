@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2022 at 12:57 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.26
+-- Generation Time: Sep 29, 2022 at 06:02 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -139,6 +139,25 @@ INSERT INTO `role_pengguna` (`id`, `id_role`, `nama_role`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tes_qrcode`
+--
+
+CREATE TABLE `tes_qrcode` (
+  `id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `file` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tes_qrcode`
+--
+
+INSERT INTO `tes_qrcode` (`id`, `text`, `file`) VALUES
+(1, 'adfadf', 'adfadf');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `token_pengguna`
 --
 
@@ -206,6 +225,12 @@ ALTER TABLE `role_pengguna`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tes_qrcode`
+--
+ALTER TABLE `tes_qrcode`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `token_pengguna`
 --
 ALTER TABLE `token_pengguna`
@@ -250,6 +275,12 @@ ALTER TABLE `p_kalibrasi`
 --
 ALTER TABLE `role_pengguna`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tes_qrcode`
+--
+ALTER TABLE `tes_qrcode`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `token_pengguna`
