@@ -76,7 +76,11 @@
                                                     <td><?= $i++ ?></td>
                                                     <td><?php echo $data->text?></td>
                                                     <td><img src="<?php echo base_url($data->file) ?>" alt="Foto" width="50" /></td>
-                                                    <td><img src="<?php echo base_url($data->file) ?>" alt="Foto" width="50" /></td>
+                                                    <td>
+                                                        <a href="<?php echo site_url('C_Qrcode/download_qrcode/'.$data->id) ?>" class="btn btn-small btn-success">
+                                                            <i class="fas fa-file-download"></i> Download QRcode
+                                                        </a>
+                                                    </td>
                                                     <td>
                                                         <a href="#!" class="btn btn-sm btn-outline-success">
                                                             <i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i>

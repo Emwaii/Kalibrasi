@@ -110,4 +110,11 @@ class C_Qrcode extends CI_Controller
         );
         return $return;
     }
+
+	public function download_qrcode($id)
+	{
+		$data = $this->db->get_where('tes_qrcode',['id'=>$id])->row();
+		force_download($data->file,NULL);
+	}
+	
 }
